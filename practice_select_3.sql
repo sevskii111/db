@@ -129,7 +129,7 @@ SELECT
   albums.Title
 FROM
   tracks
-  INNER JOIN media_types ON media_types.Name = "AAC audio file"
+  INNER JOIN media_types ON media_types.Name = "AAC audio file" AND media_types.MediaTypeId = tracks.MediaTypeId
   INNER JOIN albums ON albums.AlbumId = tracks.AlbumId;
 
 -- Выведите наименования и исполнителей треков из плейлиста Heavy Metal Classic.
