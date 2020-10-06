@@ -120,7 +120,8 @@ SELECT
   GROUP_CONCAT(Title)
 FROM
   albums
-  INNER JOIN artists ON artists.Name = "Queen";
+  INNER JOIN artists ON artists.Name = "Queen"
+  AND albums.ArtistId = artists.ArtistId;
 
 -- Выведите названия треков в формате AAC audio file и названия альбомов с исполнителями, откуда эти треки.
 SELECT
